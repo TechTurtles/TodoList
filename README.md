@@ -1,0 +1,3 @@
+# TodoList
+A to-do list Java app 
+Ein mit Docker und Gradle erstelltes Java-Programm für ToDo-Listen kann Benutzern helfen, ihre Aufgaben zu verwalten und organisiert zu bleiben. Das Programm ermöglicht es Benutzern, ToDos hinzuzufügen, ToDos zu löschen, bestimmte ToDos zu finden und alle ToDos anzuzeigen. Außerdem können Benutzer ToDos als erledigt" oder verspätet" markieren, um ihren Fortschritt zu verfolgen. Docker wird zum Erstellen und Verwalten des Programms verwendet, während Gradle die Abhängigkeiten verwaltet und sicherstellt, dass das Projekt korrekt erstellt wird. Mit diesem ToDo-Listen-Programm können Benutzer ihre Aufgaben einfach verwalten und den Überblick über ihre ToDo-Liste behalten.
