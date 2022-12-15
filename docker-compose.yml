@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  db:
+    hostname: todos-db
+    container_name: todos-db
+    image: mysql:latest
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=todosdb
+      - MYSQL_PASSWORD=root
+    networks:
+      - todos-network
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+
+  backend:
+    hostname: todos-backend
+    container_name: todos-backend
+    restart: unless-stopped
+    build:
+      context: ./todoList
+    depends_on:
+      - db
+    ports:
+      - 8085:8085
+    expose:
+      - 8085
+    environment:
+      - DATABASE_HOST=localhost
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=root
+      - DATABASE_NAME=todosdb
+      - DATABASE_PORT=3306
+    networks:
+      - todos-network
+
+networks:
+  todos-network:
+    name: todos-network
